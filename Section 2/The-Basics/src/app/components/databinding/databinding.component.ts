@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class DatabindingComponent implements OnInit {
   stringInterpolation = 'String Interpolation';
   propertyBinding = 'Property Binding';
+  enableButton = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.enableButton = !this.enableButton;
+    }, 2000);
+   }
 
   ngOnInit(): void {
   }
-
 }
