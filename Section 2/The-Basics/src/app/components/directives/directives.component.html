@@ -7,5 +7,5 @@
 </ng-template>
 <button class="btn btn-dark" (click)="addToList()">Add to list</button>
 <ul>
-    <li *ngFor="let val of inputArray"> {{val}}</li>
+    <li *ngFor="let val of inputArray; let i = index">no.{{i}} {{val}}</li>
 </ul>
