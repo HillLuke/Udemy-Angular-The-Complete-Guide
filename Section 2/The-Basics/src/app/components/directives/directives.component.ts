@@ -13,4 +13,7 @@ export class DirectivesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getColor(){
+    return this.inputVal ? 'green' : 'red';
+  }
 }
