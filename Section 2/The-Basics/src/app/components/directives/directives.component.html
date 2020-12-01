@@ -1,0 +1,7 @@
+<p class="h2">Directives</p>
+<p class="h3">*ngIf</p>
+<input type="text" [(ngModel)]="inputVal">
+<p *ngIf="inputVal; else noValueEntered">You entered: {{inputVal}}</p>
+<ng-template #noValueEntered>
+    <p>No value entered</p>
+</ng-template>
