@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-eventbinding',
@@ -18,7 +17,7 @@ export class EventbindingComponent implements OnInit {
     this.clickCount++;
   }
 
-  onInputKeystroke(event: any){
+  onInputKeystroke(event: Event){
     this.inputVal = (event.target as HTMLInputElement).value;
   }
 }
