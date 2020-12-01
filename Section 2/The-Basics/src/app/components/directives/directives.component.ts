@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesComponent implements OnInit {
 
   inputVal = '';
+  inputArray = [];
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +16,12 @@ export class DirectivesComponent implements OnInit {
 
   getColor(){
     return this.inputVal ? 'green' : 'red';
+  }
+
+  addToList(){
+    if (this.inputVal){
+      this.inputArray.push(this.inputVal);
+      this.inputVal = '';
+    }
   }
 }
