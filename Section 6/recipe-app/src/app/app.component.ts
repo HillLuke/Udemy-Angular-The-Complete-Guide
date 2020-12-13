@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { link } from 'fs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-app';
+  linkClicked = 'recipes';
+
+  onNavigate(linkClicked: string){
+    this.linkClicked = linkClicked;
+  }
 }
