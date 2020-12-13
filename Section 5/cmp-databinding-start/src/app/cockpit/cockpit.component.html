@@ -15,7 +15,7 @@
           (click)="onAddServer()">Add Server</button>
         <button
           class="btn btn-primary mr-1 mb-1 mb-sm-0 mb-md-0"
-          [disabled]="newServerName || newServerContent"
+          [disabled]="!newServerName || !newServerContent"
           (click)="onAddBlueprint()">Add Server Blueprint</button>
       </div>
     </div>
