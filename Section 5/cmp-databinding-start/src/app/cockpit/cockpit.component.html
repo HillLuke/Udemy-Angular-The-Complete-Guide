@@ -2,7 +2,7 @@
     <div class="col col-sm-8 col-md-6 col-lg-6">   
       <div class="form-group">
         <label>Server Name</label>
-        <input type="text" class="form-control" placeholder="Server Name" [(ngModel)]="newServerName">
+        <input type="text" class="form-control" placeholder="Server Name" #serverNameInput>
       </div>      
       <div class="form-group">
         <label>Server Content</label>
@@ -11,12 +11,12 @@
       <div class="">
         <button 
           class="btn btn-primary mr-1 mb-1 mb-sm-0 mb-md-0"
-          [disabled]="!newServerName || !newServerContent"
-          (click)="onAddServer()">Add Server</button>
+          [disabled]="!serverNameInput.value || !newServerContent"
+          (click)="onAddServer(serverNameInput)">Add Server</button>
         <button
           class="btn btn-primary mr-1 mb-1 mb-sm-0 mb-md-0"
-          [disabled]="!newServerName || !newServerContent"
-          (click)="onAddBlueprint()">Add Server Blueprint</button>
+          [disabled]="!serverNameInput.value || !newServerContent"
+          (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
       </div>
     </div>
   </div>
