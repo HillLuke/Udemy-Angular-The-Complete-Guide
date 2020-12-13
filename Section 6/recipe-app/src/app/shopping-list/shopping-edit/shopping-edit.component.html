@@ -3,14 +3,14 @@
         <form>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Name">
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Name" #nameInput>
             </div>
             <div class="form-group">
                 <label for="amount">Amount</label>
-                <input type="number" class="form-control" id="amount" aria-describedby="amountHelp" placeholder="Amount">
+                <input type="number" class="form-control" id="amount" aria-describedby="amountHelp" placeholder="Amount" #amountInput>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-success mr-1">Add Item</button>
+                <button type="submit" class="btn btn-success mr-1" (click)="addIngredient(nameInput.value, amountInput.value)">Add Ingredient</button>
                 <button type="button" class="btn btn-danger mr-1">Delete</button>
                 <button type="button" class="btn btn-info">Clear</button>
             </div>
