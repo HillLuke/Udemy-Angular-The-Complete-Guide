@@ -1,0 +1,10 @@
+<div>
+<button (click)="click()">Click me!</button>
+<p *ngIf="count">Button clicked {{count}} times</p>
+</div>
+<br />
+<br />
+<div>
+<button (click)="addNewItem()">Add new item</button>
+<div *ngFor="let item of things">{{item}}</div>
+</div>
