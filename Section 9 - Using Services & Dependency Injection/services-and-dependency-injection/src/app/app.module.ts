@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ClickerComponent } from './clicker/clicker.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClickerComponent
+    ClickerComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule
